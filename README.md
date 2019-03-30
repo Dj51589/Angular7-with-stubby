@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
 ## Integrate stubby server 
-It is a best practise for developers to use stub or mock data while developing application. It saves time to build an application rather than waiting for api's details from Backend team. It happen sometimes, frontend wait for Backend for the api details. So, to build application parallelly and to save time, we start developing application with stub data with the mutual agreement with Backend team on api's request and response struture. 
+It is a best practise for developers to use stub or mock data while developing application. It saves time to build an application rather than waiting for api's details from Backend team. It happen sometimes, frontend wait for Backend for the api details. So, to build application parallel and to save time, we start developing application with stub data with the mutual agreement with Backend team on api's request and response structure. 
 
 ## Code 
 https://github.com/deejay24/Angular7-with-stubby
@@ -18,7 +18,7 @@ Run `npm install stubby`. It will install stubby in your application folder. To 
 configuration setting is required.
 
 Open `package.json` and add a script `stubs: "stubby -s 1500 -d stubbs/stubby.json -w"`. 
-Stubby needs some parameters to run it. `-s`: port number to run stubby server, `-d`: data file for stubby endpoints. `-w`: it will auto-relaod data files after any changes. You can check more here https://www.npmjs.com/package/stubby.
+Stubby needs some parameters to run it. `-s`: port number to run stubby server, `-d`: data file for stubby endpoints. `-w`: it will auto-reload data files after any changes. You can check more here https://www.npmjs.com/package/stubby.
 
 Now, after these settings, we have to check whether stubby server settings are correctly done or not. So now, run `npm run stubs` on command prompt. If it is done successfully, you will get successful message.
 
@@ -53,17 +53,17 @@ Include `import { HttpClient } from '@angular/common/http';` wherever you want t
 
 Then, add `HttpClient` in your component constructor to access it's method and make your api calls as required.
 
-## run application and stuuby server together
-Our application is running by `npm start` and stubby server is running by `npm run stubs`. Both can be run but on two different commands. We can't work like this where we have two environments separately. So how we can run it toghether?
+## run application and stubby server together
+Our application is running by `npm start` and stubby server is running by `npm run stubs`. Both can be run, but on two different commands. We can't work like this where we have two environments separately. So how we can run it toghether?
 
-`npm Concurrently` will solve our problem. Concurrently is used to run mulitple scripts toghether. 
+`npm Concurrently` will solve our problem. Concurrently is used to run multiple scripts together. 
 Add one more scripts in package.json to run Concurrently. 
 
 Add `"stubby": "concurrently \"npm start\" \"npm run stubs\""` in package.json. Here, i have added one script named stubby that run `npm start` and `npm stubs` together.
 
-Run `npm run stubby`, and Navigate to `http://localhost:4200` and `http://localhost:1500/employeesList`. Youur application and stubby server both are running together.
+Run `npm run stubby`, and Navigate to `http://localhost:4200` and `http://localhost:1500/employeesList`. Your application and stubby server both are running together.
 
-Now you can make api calling of endpoints decalred in your stubby.json file from your componenets or from service and you get the response. 
+Now you can make api calling of endpoints decalred in your stubby.json file from your components or from service and you get the response. 
 
 So by using this technique, you can parallelly develop your application without waiting of Backend api's.
 
