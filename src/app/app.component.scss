@@ -1,0 +1,15 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+}
+.text-center {
+    text-align: center;
+}
+table {
+    border: 1px solid #d4d4d4;
+    border-spacing: 0px;
+    th, td {
+        padding: 10px;
+        border-bottom: 1px solid #d4d4d4;
+    }
+}
