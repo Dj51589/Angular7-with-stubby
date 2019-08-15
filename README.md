@@ -8,6 +8,9 @@ It is a best practise for developers to use stub or mock data while developing a
 ## Code 
 https://github.com/deejay24/Angular7-with-stubby
 
+## Live Demo
+https://stackblitz.com/edit/stubby-integreation-angular7
+
 
 ## Getting Started
 Run `ng new application-name` angular cli command to create application base.
