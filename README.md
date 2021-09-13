@@ -70,7 +70,4 @@ Now you can make api calling of endpoints decalred in your stubby.json file from
 
 So by using this technique, you can parallelly develop your application without waiting of Backend api's.
 
-## Author
-Dheeraj Jaiswal
-Frontend Developer
-jdheeraj32@gmail.com
+
